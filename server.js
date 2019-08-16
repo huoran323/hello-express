@@ -1,5 +1,6 @@
 // 导入express
 var express = require("express");
+// 处理表单请求的库
 var bodyParser = require("body-parser");
 var fs = require("fs");
 // 处理文件上传的库（下面两个）
