@@ -6,6 +6,15 @@ var fs = require("fs");
 var multer = require("multer");
 var upload = multer({ dest: "uploads/" }); //文件保存的路径
 
+/****************** */
+// 路由中间件
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
+
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+/****************** */
+
 // 生成实例
 var app = express();
 // 中间件urlencoded只处理传递进来的参数为urlencoded格式的，不能接收json格式传输过来的参数
